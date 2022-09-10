@@ -11,8 +11,9 @@ const listContainer = document.getElementById('todo-list');
 
 const addToStorage = () => {
     const inputValue = inputField.value;
-    if (inputValue === '') {
-        alert("please don't leave empty")
+    if (inputValue === '' || !isNaN(inputValue)) {
+        alert("please don't leave empty  or number is not allowed")
+        inputField.value = '';
         return;
     }
 
